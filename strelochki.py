@@ -1,7 +1,7 @@
 import numpy as np
 import cv2 as cv
 
-img = cv.imread("RES/levo1.PNG")
+img = cv.imread("resources/levo1.PNG")
 gray = cv.cvtColor(img,cv.COLOR_BGR2GRAY)
 canny = cv.Canny(gray,50,50)
 lines = cv.HoughLinesP(canny,rho = 1,theta = 1*np.pi/180,threshold = 50,minLineLength = 50,maxLineGap = 50)
